@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" stylesheets="@../../assets/cssStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasa.controller.viewcontroller.ViewApprovedLoansFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="36.0" prefHeight="59.0" prefWidth="486.0" styleClass="labelHead" text="VIEW APPROVED LOAN LIST" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <JFXScrollPane layoutX="14.0" layoutY="119.0" prefHeight="727.0" prefWidth="1170.0">
+         <children>
+            <TableView fx:id="tblLoans" prefHeight="702.0" prefWidth="1173.0" styleClass="scroll-pane" stylesheets="@../../assets/cssStyle.css">
+               <columns>
+                  <TableColumn fx:id="colID" prefWidth="75.0" text="LoanID" />
+                  <TableColumn fx:id="colAmount" prefWidth="75.0" text="Amount" />
+                  <TableColumn fx:id="colLoanTypeID" prefWidth="75.0" text="LoanTypeID" />
+                  <TableColumn fx:id="colAccountID" prefWidth="75.0" text="AccountID" />
+                  <TableColumn fx:id="colINstallment" prefWidth="75.0" text="Instalment" />
+                  <TableColumn fx:id="colIssuedDate" prefWidth="75.0" text="IssuedDate" />
+                  <TableColumn fx:id="colInsDate" prefWidth="75.0" text="Monthly Ins Date" />
+                  <TableColumn fx:id="colRemLoanAmount" prefWidth="75.0" text="Rem.Loan.Amount" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </JFXScrollPane>
+   </children>
+</AnchorPane>

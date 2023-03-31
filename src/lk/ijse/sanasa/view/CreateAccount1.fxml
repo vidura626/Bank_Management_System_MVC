@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" side="BOTTOM" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasa.controller.CreateAccount1Controller">
+   <tabs>
+      <Tab fx:id="tabCreateAccount" text="Account">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1200.0">
+               <children>
+                  <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton layoutX="961.0" layoutY="726.0" onAction="#btnCreateAccountOnAction" prefHeight="58.0" prefWidth="216.0" text="CREATE ACCOUNT" />
+                        <HBox layoutX="25.0" layoutY="118.0" prefHeight="565.0" prefWidth="669.0" styleClass="vbox">
+                           <children>
+                              <VBox prefHeight="561.0" prefWidth="34.0" />
+                              <VBox prefHeight="561.0" prefWidth="126.0">
+                                 <children>
+                                    <Pane prefHeight="48.0" prefWidth="94.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="NIC" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="47.0" prefWidth="94.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="Name" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="52.0" prefWidth="94.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="Address" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="55.0" prefWidth="94.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="Contact" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="54.0" prefWidth="94.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="Email" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="50.0" prefWidth="94.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="DOB" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="41.0" prefWidth="94.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="Gender" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="540.0" prefWidth="458.0">
+                                 <children>
+                                    <AnchorPane prefHeight="36.0" prefWidth="458.0" />
+                                    <JFXTextField fx:id="txtNic" focusColor="WHITE" onKeyReleased="#txtNicOnKeyReleased" />
+                                    <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblNotifyNic" layoutX="56.0" layoutY="4.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXTextField fx:id="txtName" focusColor="WHITE" onKeyReleased="#txtNameOnKeyReleased" />
+                                    <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblNotifyName" layoutX="63.0" layoutY="12.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXTextField fx:id="txtAddress" focusColor="WHITE" onKeyReleased="#txtAddressOnKeyReleased" />
+                                    <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblNotifyAddress" layoutX="8.0" layoutY="8.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXTextField fx:id="txtContact" focusColor="WHITE" onKeyReleased="#txtContactOnKeyReleased" />
+                                    <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblNotifyContact" layoutX="45.0" layoutY="4.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXTextField fx:id="txtEmail" focusColor="WHITE" onKeyReleased="#txtEmailOnKeyReleased" />
+                                    <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblNotifyEmail" layoutY="8.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <HBox prefHeight="43.0" prefWidth="458.0">
+                                       <children>
+                                          <JFXTextField fx:id="txtDob" editable="false" prefHeight="44.0" prefWidth="416.0" promptText="Select Date Of Birth" />
+                                          <JFXDatePicker fx:id="datePickerDob" editable="false" onAction="#datePickerOnAction" prefHeight="50.0" prefWidth="33.0" />
+                                       </children>
+                                    </HBox>
+                                    <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblNotifyDob" layoutX="7.0" layoutY="4.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <HBox fx:id="hBoxGender" prefHeight="30.0" prefWidth="312.0" styleClass="text-field">
+                                       <children>
+                                          <Pane prefHeight="24.0" prefWidth="42.0" />
+                                          <JFXRadioButton fx:id="radioButtonMale" onAction="#radioButtonGenderOnAction" selected="true" text="Male">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="toggleGroupGender" />
+                                             </toggleGroup>
+                                          </JFXRadioButton>
+                                          <Pane prefHeight="24.0" prefWidth="42.0" />
+                                          <JFXRadioButton fx:id="radioButtonFemale" onAction="#radioButtonGenderOnAction" prefHeight="21.0" prefWidth="112.0" text="Female" toggleGroup="$toggleGroupGender" />
+                                          <Pane prefHeight="24.0" prefWidth="42.0" />
+                                          <JFXRadioButton fx:id="radioButtonOther" onAction="#radioButtonGenderOnAction" prefHeight="21.0" prefWidth="112.0" text="Other" toggleGroup="$toggleGroupGender" />
+                                       </children>
+                                    </HBox>
+                                    <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblNotifyGender" layoutX="7.0" layoutY="4.0" styleClass="labelNotify" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="561.0" prefWidth="38.0" />
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="38.0" prefHeight="59.0" prefWidth="289.0" styleClass="labelHead" text="ACCOUNT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="38.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutX="719.0" layoutY="118.0" prefHeight="352.0" prefWidth="458.0" styleClass="vbox">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="311.0" prefWidth="87.0" />
+                              <VBox alignment="TOP_CENTER" prefHeight="311.0" prefWidth="177.0">
+                                 <children>
+                                    <Pane prefHeight="43.0" prefWidth="101.0" />
+                                    <Label alignment="CENTER" prefHeight="64.0" prefWidth="128.0" text="Account Number" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="10.0" prefWidth="159.0" />
+                                    <Label alignment="CENTER" prefHeight="71.0" prefWidth="128.0" text="Account Type" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="14.0" prefWidth="159.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="Date" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="43.0" prefWidth="159.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="Time" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="309.0" prefWidth="405.0">
+                                 <children>
+                                    <Pane prefHeight="48.0" prefWidth="330.0" />
+                                    <JFXTextField fx:id="txtAccNoo" disable="true" focusColor="WHITE" />
+                                    <Pane prefHeight="29.0" prefWidth="413.0" />
+                                    <JFXComboBox fx:id="cmbAccTypes" onAction="#cmbAccTypesOnAction" prefHeight="43.0" prefWidth="419.0" styleClass="text-field" stylesheets="@../assets/cssStyle.css" />
+                                    <AnchorPane prefHeight="35.0" prefWidth="330.0">
+                                       <children>
+                                          <Label fx:id="lblNotifyAccType" layoutY="4.0" prefHeight="14.0" prefWidth="330.0" styleClass="labelNotify" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXTextField fx:id="txtDate" disable="true" focusColor="WHITE" />
+                                    <Pane prefHeight="29.0" prefWidth="413.0" />
+                                    <JFXTextField fx:id="txtTime" disable="true" focusColor="WHITE" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="311.0" prefWidth="87.0" />
+                           </children>
+                        </HBox>
+                        <JFXButton layoutX="719.0" layoutY="726.0" onAction="#btnClearFormOnAction" prefHeight="58.0" prefWidth="228.0" text="CLEAR FORM" />
+                        <Pane layoutX="719.0" layoutY="487.0" prefHeight="196.0" prefWidth="458.0" styleClass="vbox">
+                           <children>
+                              <JFXTextField fx:id="txtFirstDeposit" focusColor="WHITE" layoutX="29.0" layoutY="101.0" onAction="#txtFirstDepositOnAction" onKeyReleased="#txtFirstDepositOnKeyReleased" prefHeight="37.0" prefWidth="400.0" />
+                              <Label alignment="TOP_LEFT" layoutX="34.0" layoutY="52.0" prefHeight="24.0" prefWidth="244.0" text="Make first deposit" textFill="WHITE">
+                                 <font>
+                                    <Font name="Eras Bold ITC" size="20.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutY="141.0" prefHeight="36.0" prefWidth="458.0">
+                                 <children>
+                                    <Label fx:id="lblNotifyFirstDeposit" layoutX="7.0" layoutY="4.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </Pane>
+                        <Label fx:id="lblNotifyCreateAccount" layoutX="666.0" layoutY="691.0" prefHeight="28.0" prefWidth="518.0" />
+                        <AnchorPane fx:id="paneSearchUpdate" layoutX="327.0" layoutY="705.0" prefHeight="142.0" prefWidth="359.0" styleClass="vbox">
+                           <children>
+                              <JFXTextField fx:id="txtSearch" focusColor="WHITE" layoutX="18.0" layoutY="14.0" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="36.0" prefWidth="290.0" promptText="Account No" />
+                              <JFXButton fx:id="btnUpdate" layoutX="14.0" layoutY="79.0" onAction="#btnUpdateOnAction" prefHeight="44.0" prefWidth="218.0" text="UPDATE ACCOUNT" />
+                              <Label fx:id="lblNotifySearchUpdate" layoutX="34.0" layoutY="59.0" prefHeight="24.0" prefWidth="276.0" styleClass="labelNotify" text="Label" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="57.0" />
+                              <JFXButton layoutX="236.0" layoutY="79.0" onAction="#onPasteOnAction" prefHeight="44.0" prefWidth="108.0" text="PasteID" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneSearchUpdate1" layoutX="25.0" layoutY="705.0" prefHeight="142.0" prefWidth="288.0" styleClass="vbox">
+                           <children>
+                              <JFXTextField fx:id="txtFindAccNo" focusColor="WHITE" labelFloat="true" layoutX="18.0" layoutY="14.0" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="36.0" prefWidth="249.0" promptText="Nic" />
+                              <JFXButton fx:id="btnFindAccNo" layoutX="61.0" layoutY="79.0" onAction="#btnFindAccNoOnAction" prefHeight="44.0" prefWidth="205.0" text="Find account No" />
+                              <Label fx:id="lblNotifyFindAccNo" layoutX="34.0" layoutY="59.0" prefHeight="24.0" prefWidth="276.0" styleClass="labelNotify" text="Label" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="57.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabCloseAccount" text="Account View and Close">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="27.0" layoutY="38.0" prefHeight="59.0" prefWidth="426.0" styleClass="labelHead" text="Account View and Close" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="38.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtAccNumb" focusColor="WHITE" labelFloat="true" layoutX="27.0" layoutY="133.0" onKeyReleased="#txtAccNumbOnKeyReleased" prefHeight="47.0" prefWidth="554.0" promptText="Account Number" />
+                  <VBox layoutX="27.0" layoutY="204.0" prefHeight="632.0" prefWidth="563.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="Account Number" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblAccNumberr" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="NIC" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblNicc" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="Name" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblNamee" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="Address" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblAddresss" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="Contact" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblContactt" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="Date Of Birth" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblDobb" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="Email" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblEmaill" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="Gender" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblGenderr" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="Reg Date" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblRegDatee" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="578.0" text="Reg Time" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="lblRegTimee" prefHeight="49.0" prefWidth="572.0" styleClass="labelNormal" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <TableView fx:id="tblAccBalancee" layoutX="628.0" layoutY="133.0" prefHeight="238.0" prefWidth="553.0">
+                    <columns>
+                      <TableColumn fx:id="colDeposittType" prefWidth="264.0" text="Deposit Type" />
+                      <TableColumn fx:id="colBalancee" prefWidth="187.0" text="Balance" />
+                        <TableColumn fx:id="colActionn1" prefWidth="98.0" text="Action" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="TOP_CENTER" layoutX="629.0" layoutY="109.0" prefHeight="30.0" prefWidth="550.0" text="Account savings balances" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="629.0" layoutY="401.0" prefHeight="30.0" prefWidth="550.0" text="Available Loans" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblLoansAvailables" layoutX="628.0" layoutY="431.0" prefHeight="238.0" prefWidth="553.0">
+                     <columns>
+                        <TableColumn fx:id="colLoanTypee" prefWidth="264.0" text="Loan Type" />
+                        <TableColumn fx:id="colLoanBalancee" prefWidth="187.0" text="Loan Balance" />
+                        <TableColumn fx:id="colActionn2" prefWidth="98.0" text="Action" />
+                     </columns>
+                  </TableView>
+                  <JFXButton fx:id="btnCloseeAccount" layoutX="940.0" layoutY="755.0" onAction="#btnCloseAccounttOnAction" prefHeight="64.0" prefWidth="223.0" text="CLOSE ACCOUNT" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabViewAccount" text="View Accounts Details">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="36.0" prefHeight="59.0" prefWidth="436.0" styleClass="labelHead" text="VIEW ACCOUNTS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="38.0" />
+                     </font>
+                  </Label>
+                  <JFXScrollPane layoutX="14.0" layoutY="119.0" prefHeight="727.0" prefWidth="1170.0">
+                     <children>
+                        <TableView fx:id="tblAccounts" editable="true" onMouseClicked="#tblAccountsOnClicks" prefHeight="702.0" prefWidth="1173.0" stylesheets="@../assets/cssStyle.css">
+                           <columns>
+                              <TableColumn fx:id="colID" prefWidth="75.0" text="AccID" />
+                              <TableColumn fx:id="colNic" prefWidth="75.0" text="NIC" />
+                              <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
+                              <TableColumn fx:id="colContact" prefWidth="75.0" text="Contact" />
+                              <TableColumn fx:id="colDOB" prefWidth="75.0" text="DOB" />
+                              <TableColumn fx:id="colEmail" prefWidth="75.0" text="Email" />
+                              <TableColumn fx:id="colGender" prefWidth="75.0" text="Gender" />
+                              <TableColumn fx:id="colRegDate" prefWidth="75.0" text="RegDate" />
+                              <TableColumn fx:id="colRegTime" prefWidth="75.0" text="RegTime" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </JFXScrollPane>
+                  <TextField fx:id="txtSelectedID" disable="true" layoutX="921.0" layoutY="50.0" />
+                  <JFXButton layoutX="802.0" layoutY="49.0" onAction="#btnCopyOnAction" text="Copy" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabViewAccount1" text="Account Deposit Balances">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="36.0" prefHeight="59.0" prefWidth="486.0" styleClass="labelHead" text="ACCOUNT DEPOSIT BALANCE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="38.0" />
+                     </font>
+                  </Label>
+                  <JFXScrollPane layoutX="16.0" layoutY="211.0" prefHeight="389.0" prefWidth="1166.0">
+                     <children>
+                        <TableView fx:id="tblDepositAccount" editable="true" prefHeight="702.0" prefWidth="1173.0" stylesheets="@../assets/cssStyle.css">
+                           <columns>
+                              <TableColumn fx:id="colDepositTypeAccountID" prefWidth="75.0" text="DepositTypeAccountID" />
+                              <TableColumn fx:id="colDepositTypeID" prefWidth="75.0" text="DepositTypeID" />
+                              <TableColumn fx:id="colAccountID" prefWidth="75.0" text="AccountID" />
+                              <TableColumn fx:id="colCreatedDate" prefWidth="75.0" text="CreatedDate" />
+                              <TableColumn fx:id="colBalance" prefWidth="75.0" text="Balance" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </JFXScrollPane>
+                  <JFXTextField fx:id="txtAccNo" focusColor="WHITE" labelFloat="true" layoutX="25.0" layoutY="136.0" onAction="#txtAccNoOnAction" onKeyReleased="#txtAccNoOnKeyReleased" prefHeight="49.0" prefWidth="357.0" promptText="Account Number" />
+                  <Label fx:id="lblNotifyAccNo" layoutX="23.0" layoutY="442.0" prefHeight="21.0" prefWidth="348.0" />
+                  <AnchorPane layoutX="14.0" layoutY="624.0" prefHeight="226.0" prefWidth="1172.0" styleClass="vbox">
+                     <children>
+                        <JFXTextField fx:id="txtDescription" alignment="CENTER" disable="true" focusColor="WHITE" labelFloat="true" layoutX="39.0" layoutY="145.0" onKeyReleased="#txtAccNoOnKeyReleased" prefHeight="49.0" prefWidth="717.0" promptText="Description" />
+                        <JFXTextField fx:id="txtInterest" alignment="CENTER" focusColor="WHITE" labelFloat="true" layoutX="766.0" layoutY="145.0" onKeyReleased="#txtAccNoOnKeyReleased" prefHeight="49.0" prefWidth="357.0" promptText="Interest" />
+                        <JFXComboBox fx:id="cmbDepositType" labelFloat="true" layoutX="194.0" layoutY="82.0" onAction="#cmbDepositTypeOnAction" prefHeight="41.0" prefWidth="344.0" styleClass="text-field" />
+                        <JFXButton layoutX="593.0" layoutY="82.0" onAction="#btnUpdateDepositTypeOnAction" prefHeight="38.0" prefWidth="193.0" text="Update Interest" />
+                        <Label alignment="CENTER" layoutX="26.0" layoutY="14.0" prefHeight="48.0" prefWidth="335.0" style="-fx-border-color: WHITE;" styleClass="labelNormal" text="DEPOSIT TYPE SETTINGS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="809.0" layoutY="82.0" onAction="#btnViewDepositTypeOnAction" prefHeight="38.0" prefWidth="110.0" text="View" />
+                        <Label layoutX="56.0" layoutY="82.0" prefHeight="30.0" prefWidth="123.0" text="Type" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasa.controller.MainDashboardFormController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="900.0" prefWidth="300.0" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="4.0" layoutY="94.0" onAction="#btnAccountOnAction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text="Accounts" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="5.0" layoutY="361.0" onAction="#btynLoanOnAction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text="Request a Loans" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="4.0" layoutY="161.0" onAction="#btnDepositOnAction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text="Deposits" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="5.0" layoutY="226.0" onAction="#btnWithdrawalOnAction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text="Withdrawals" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="5.0" layoutY="292.0" onAction="#btnInterAccountTransaction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text="Money Transfer" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView fx:id="drg" glyphName="GEAR" layoutX="13.0" layoutY="57.0" size="50" />
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="3.0" layoutY="427.0" onAction="#btynApproveLoansOnAction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text="Approve Loans" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="5.0" layoutY="497.0" onAction="#btnRejectLoansOnAction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text=" Reject Loans" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="5.0" layoutY="632.0" onAction="#btnReportsOnAction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text="Reports" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="5.0" layoutY="565.0" onAction="#btnLoanInstallmentOnAction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text="Loan Installment" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="56.0" layoutY="20.0" prefHeight="40.0" prefWidth="240.0" styleClass="labelHead" text="DASHBOARD" textAlignment="CENTER" />
+            <JFXButton alignment="TOP_RIGHT" buttonType="RAISED" layoutX="31.0" layoutY="699.0" onAction="#btnLoanTypesDashboardOnAction" prefHeight="60.0" prefWidth="240.0" stylesheets="@../assets/cssStyle.css" text="Loan Types Dashboard">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane" layoutX="656.0" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" side="BOTTOM" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasa.controller.AddLoanDetailsController">
+   <tabs>
+      <Tab fx:id="tabLoanTypeDetails" text="Loan Type Details">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1200.0">
+               <children>
+                  <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox layoutX="45.0" layoutY="121.0" prefHeight="240.0" prefWidth="658.0" styleClass="vbox">
+                           <children>
+                              <VBox prefHeight="224.0" prefWidth="31.0" />
+                              <VBox prefHeight="221.0" prefWidth="208.0">
+                                 <children>
+                                    <Pane prefHeight="24.0" prefWidth="153.0" />
+                                    <Label alignment="CENTER" prefHeight="24.0" prefWidth="309.0" text="Loan Type ID" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="42.0" prefWidth="140.0" />
+                                    <Label alignment="CENTER" prefHeight="24.0" prefWidth="305.0" text="Description" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="44.0" prefWidth="140.0" />
+                                    <Label alignment="CENTER" prefHeight="24.0" prefWidth="261.0" text="Interest" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="39.0" prefWidth="140.0" />
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="Amounts" textFill="WHITE">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="32.0" prefWidth="142.0" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="224.0" prefWidth="541.0">
+                                 <children>
+                                    <AnchorPane prefHeight="34.0" prefWidth="438.0" />
+                                    <JFXTextField fx:id="txtLoanTypeID" disable="true" focusColor="WHITE" />
+                                    <AnchorPane prefHeight="30.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblNotifyNic" layoutX="56.0" layoutY="4.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXTextField fx:id="txtDescription" focusColor="WHITE" onKeyReleased="#txtDescriptionOnKeyReleased" />
+                                    <AnchorPane prefHeight="30.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblDescription" layoutX="63.0" layoutY="12.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXTextField fx:id="txtInterest" focusColor="WHITE" onKeyReleased="#txtInterestOnKeyReleased" />
+                                    <AnchorPane prefHeight="30.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblInterest" layoutX="8.0" layoutY="8.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXTextField fx:id="txtAmounts" focusColor="WHITE" onKeyReleased="#txtAmountsOnKeyReleased" />
+                                    <AnchorPane prefHeight="30.0" prefWidth="458.0">
+                                       <children>
+                                          <Label fx:id="lblAmounts" layoutY="8.0" styleClass="labelNotify" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="224.0" prefWidth="29.0" />
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="38.0" prefHeight="59.0" prefWidth="436.0" styleClass="labelHead" text="LOAN TYPES SETTINGS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="38.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="paneSearchUpdate" layoutX="725.0" layoutY="136.0" prefHeight="117.0" prefWidth="436.0" styleClass="vbox" AnchorPane.bottomAnchor="610.0" AnchorPane.leftAnchor="725.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="136.0">
+                           <children>
+                              <JFXTextField fx:id="txtSearch" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="10.0" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="36.0" prefWidth="412.0" promptText="Search" />
+                              <JFXButton fx:id="btnUpdate" layoutX="229.0" layoutY="60.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="170.0" text="Update" />
+                              <JFXButton fx:id="btnDelete" layoutX="24.0" layoutY="61.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="186.0" text="Delete" />
+                           </children>
+                        </AnchorPane>
+                        <JFXScrollPane layoutX="35.0" layoutY="387.0" prefHeight="335.0" prefWidth="1130.0">
+                           <children>
+                              <TableView fx:id="tblLoanTypes" prefHeight="319.0" prefWidth="1364.0">
+                                <columns>
+                                  <TableColumn fx:id="colLoanTypeID" prefWidth="103.0" text="Loan Type ID" />
+                                  <TableColumn fx:id="colDescription" prefWidth="163.0" text="Description" />
+                                    <TableColumn fx:id="colInterest" prefWidth="71.0" text="Interest" />
+                                    <TableColumn fx:id="colAmounts" prefWidth="723.0" text="Amounts" />
+                                    <TableColumn fx:id="colRemove" prefWidth="64.0" text="Remove" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </JFXScrollPane>
+                        <Label fx:id="lblNotifySearchUpdate" layoutX="295.0" layoutY="710.0" prefHeight="25.0" prefWidth="617.0" styleClass="labelNotify" AnchorPane.bottomAnchor="132.0" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="294.0" AnchorPane.topAnchor="710.0" />
+                        <JFXButton layoutX="962.0" layoutY="288.0" onAction="#btnAddOnAction" prefHeight="58.0" prefWidth="196.0" stylesheets="@../assets/cssStyle.css" text="ADD" />
+                        <JFXButton layoutX="742.0" layoutY="288.0" onAction="#btnClearOnAction" prefHeight="58.0" prefWidth="192.0" text="CLEAR" />
+                        <Label fx:id="lblNotifyAddLoanTypes" layoutX="753.0" layoutY="251.0" prefHeight="31.0" prefWidth="377.0" styleClass="labelNotify" />
+                        <JFXButton layoutX="45.0" layoutY="739.0" onAction="#btnViewLoanTypesOnAction" prefHeight="58.0" prefWidth="210.0" stylesheets="@../assets/cssStyle.css" text="VIEW LOAN TYPES" />
+                        <JFXButton fx:id="btnOk" layoutX="866.0" layoutY="739.0" onAction="#btnOkOnAction" prefHeight="58.0" prefWidth="306.0" stylesheets="@../assets/cssStyle.css" text="OK" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

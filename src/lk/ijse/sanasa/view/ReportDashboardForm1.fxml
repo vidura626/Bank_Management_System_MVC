@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasa.controller.ReportDashboardFormController">
+   <children>
+      <VBox alignment="CENTER" layoutX="45.0" layoutY="121.0" prefHeight="273.0" prefWidth="443.0" style="-fx-background-color: white; -fx-background-radius: 20;" stylesheets="@../assets/cssStyle.css">
+         <children>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnViewAccountsOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW ACCOUNTS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnDailyTransactionsOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW DAILY TRANSACTIONS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnMonthlyTransactionsOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW MONTHLY TRANSACTIONS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+         </children>
+      </VBox>
+      <Label alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="45.0" layoutY="24.0" prefHeight="53.0" prefWidth="425.0" styleClass="labelHead" text="REPORT_DASHBOARD">
+         <font>
+            <Font name="System Bold" size="53.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="715.0" layoutY="121.0" prefHeight="380.0" prefWidth="455.0" style="-fx-background-color: white; -fx-background-radius: 20;" stylesheets="@../assets/cssStyle.css">
+         <children>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnPendingLoansOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW PENDING LOANS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnApprovedLoansOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW APPROVED LOANS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnSettledLoansOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW SETTLED LOANS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnArrearsLoansOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW ARREARS LOANS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="45.0" layoutY="443.0" prefHeight="294.0" prefWidth="443.0" style="-fx-background-color: white; -fx-background-radius: 20;" stylesheets="@../assets/cssStyle.css">
+         <children>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnDepositsOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW DEPOSITS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnWithdrawalsOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW WITHDRAWALS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnLoanInstallmentsOnAction" prefHeight="60.0" prefWidth="400.0" stylesheets="@../assets/cssStyle.css" text="VIEW LOAN INSTALLMENTS">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="28.0" prefWidth="489.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

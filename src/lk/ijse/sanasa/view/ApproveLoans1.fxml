@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="900.0" maxWidth="1200.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasa.controller.ApproveLoans1Controller">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="942.0" layoutY="726.0" onAction="#btnApproveOnAction" prefHeight="58.0" prefWidth="244.0" text="APPROVE" />
+      <Label alignment="CENTER" layoutX="25.0" layoutY="38.0" prefHeight="59.0" prefWidth="305.0" styleClass="labelHead" text="APPROVE LOANS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="670.0" layoutY="726.0" onAction="#btnClearFormOnAction" prefHeight="58.0" prefWidth="244.0" text="CLEAR TABLE" />
+      <Label fx:id="lblNotifyApprove" layoutX="666.0" layoutY="691.0" prefHeight="28.0" prefWidth="518.0" />
+      <AnchorPane layoutX="26.0" layoutY="316.0" prefHeight="372.0" prefWidth="1159.0" styleClass="vbox" stylesheets="@../assets/cssStyle.css">
+         <children>
+            <JFXScrollPane prefHeight="413.0" prefWidth="1142.0" stylesheets="@../assets/cssStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <TableView fx:id="tblLoans" prefHeight="423.0" prefWidth="1135.0" styleClass="text-field">
+                    <columns>
+                      <TableColumn fx:id="colLoan" prefWidth="485.9999694824219" text="Loan" />
+                        <TableColumn fx:id="colInstallmentAmount" prefWidth="202.0" text="Installment Amount" />
+                        <TableColumn fx:id="colInstallmentCount" prefWidth="168.0" text="Installment Count" />
+                        <TableColumn fx:id="colInstallmentDate" prefWidth="161.0" text="Installment Date" />
+                        <TableColumn fx:id="colPendID" minWidth="0.0" prefWidth="66.0" text="PendingID" />
+                        <TableColumn fx:id="colDelete" prefWidth="535.0" text="Remove" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </JFXScrollPane>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="339.0" layoutY="112.0" prefHeight="104.0" prefWidth="852.0" styleClass="vbox">
+         <children>
+            <VBox prefHeight="196.0" prefWidth="24.0" />
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="322.0">
+               <children>
+                  <AnchorPane prefHeight="80.0">
+                     <children>
+                        <Label fx:id="lblLoan" alignment="CENTER" layoutX="8.0" layoutY="-4.0" prefHeight="80.0" prefWidth="375.0" styleClass="labelNormal" text="Loan" textFill="#00cf83" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="348.0" prefWidth="33.0" />
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="316.0">
+               <children>
+                  <AnchorPane prefHeight="80.0">
+                     <children>
+                        <Label fx:id="lblAccNo" alignment="CENTER" prefHeight="50.0" prefWidth="0.0" styleClass="labelNormal" text="Account Number" textFill="#00cf83" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="348.0" prefWidth="33.0" />
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="255.0">
+               <children>
+                  <AnchorPane prefHeight="80.0">
+                     <children>
+                        <Label fx:id="lblAmount" alignment="CENTER" prefHeight="50.0" prefWidth="0.0" styleClass="labelNormal" text="Amount" textFill="#00cf83" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="25.0" layoutY="112.0" prefHeight="104.0" prefWidth="305.0" styleClass="vbox">
+         <children>
+            <Label alignment="BOTTOM_LEFT" prefHeight="22.0" prefWidth="322.0" text="    Loan ID" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Eras Bold ITC" size="20.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbLoanIDs" onAction="#cmbLoanIDsOnAction" prefHeight="43.0" prefWidth="457.0" styleClass="text-field" stylesheets="@../assets/cssStyle.css" />
+         </children>
+      </VBox>
+      <JFXButton buttonType="RAISED" layoutX="940.0" layoutY="235.0" onAction="#btnAddOnAction" prefHeight="58.0" prefWidth="244.0" text="Add" />
+      <JFXButton buttonType="RAISED" layoutX="681.0" layoutY="235.0" onAction="#btnRemoveOnAction" prefHeight="58.0" prefWidth="244.0" text="Remove" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="900.0" maxWidth="1200.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasa.controller.LoanInstallment1Controller">
+   <children>
+      <JFXButton layoutX="942.0" layoutY="726.0" onAction="#btnInstallOnAction" prefHeight="58.0" prefWidth="244.0" text="INSTALL" />
+      <HBox alignment="TOP_CENTER" layoutX="26.0" layoutY="111.0" prefHeight="127.0" prefWidth="1159.0" styleClass="vbox">
+         <children>
+            <VBox prefHeight="196.0" prefWidth="24.0" />
+            <VBox prefHeight="118.0" prefWidth="136.0">
+               <children>
+                  <Pane prefHeight="15.0" prefWidth="89.0" />
+                  <Label alignment="CENTER" prefHeight="58.0" prefWidth="123.0" text="Account Number" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Eras Bold ITC" size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="15.0" prefWidth="89.0" />
+                  <Label alignment="CENTER" prefHeight="57.0" prefWidth="123.0" text="Loan" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Eras Bold ITC" size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="22.0" prefWidth="123.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="540.0" prefWidth="458.0">
+               <children>
+                  <AnchorPane prefHeight="85.0" prefWidth="446.0" />
+                  <JFXTextField fx:id="txtAccNo" focusColor="WHITE" onAction="#txtAccNoOnAction" onKeyReleased="#txtAccNoOnKeyReleased" />
+                  <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                     <children>
+                        <Label fx:id="lblNotifyAccountNo" layoutX="8.0" layoutY="8.0" styleClass="labelNotify" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <JFXComboBox fx:id="cmbLoanTypes" onAction="#cmbLoanTypesOnAction" prefHeight="43.0" prefWidth="457.0" styleClass="text-field" stylesheets="@../assets/cssStyle.css" />
+                  <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                     <children>
+                        <Label fx:id="lblNotifyLoanTypes" layoutX="63.0" layoutY="12.0" prefHeight="52.0" prefWidth="458.0" styleClass="labelNotify" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="348.0" prefWidth="33.0" />
+            <VBox prefHeight="196.0" prefWidth="107.0">
+               <children>
+                  <Pane prefHeight="9.0" prefWidth="95.0" />
+                  <Label alignment="CENTER" prefHeight="21.0" prefWidth="268.0" text="Amount" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Eras Bold ITC" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="158.0" prefWidth="450.0">
+               <children>
+                  <AnchorPane prefHeight="103.0" prefWidth="438.0" />
+                  <JFXTextField fx:id="txtAmount" focusColor="WHITE" prefHeight="22.0" prefWidth="438.0" />
+                  <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                     <children>
+                        <Label fx:id="lblNotifyAmount" layoutX="56.0" layoutY="4.0" styleClass="labelNotify" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton onAction="#btnClearFormOnAction" prefHeight="58.0" prefWidth="244.0" text="CLEAR FORM" />
+                        <JFXButton onAction="#btnAddOnAction" prefHeight="58.0" prefWidth="244.0" text="ADD" />
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="36.0" prefWidth="458.0">
+                     <children>
+                        <Label fx:id="lblNotifyAdd" layoutX="56.0" layoutY="4.0" styleClass="labelNotify" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="348.0" prefWidth="33.0" />
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="38.0" prefHeight="59.0" prefWidth="368.0" styleClass="labelHead" text="LOAN INSTALLMENTS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="670.0" layoutY="726.0" onAction="#btnClearFormOnAction" prefHeight="58.0" prefWidth="244.0" text="CLEAR" />
+      <Label fx:id="lblNotifyInstall" layoutX="659.0" layoutY="700.0" prefHeight="24.0" prefWidth="526.0" />
+      <Label alignment="CENTER" layoutX="681.0" layoutY="38.0" prefHeight="59.0" prefWidth="274.0" style="-fx-border-color: black;" styleClass="labelNormal" text="Transaction ID :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTransactionID" alignment="CENTER" layoutX="971.0" layoutY="38.0" prefHeight="59.0" prefWidth="207.0" style="-fx-border-color: black;" styleClass="labelNormal" textFill="#3392ff">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="26.0" layoutY="495.0" prefHeight="219.0" prefWidth="1159.0" styleClass="vbox" stylesheets="@../assets/cssStyle.css">
+         <children>
+            <JFXScrollPane prefHeight="413.0" prefWidth="1142.0" stylesheets="@../assets/cssStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <TableView fx:id="tblLoanInstallment" prefHeight="268.0" prefWidth="819.0" styleClass="text-field">
+                    <columns>
+                      <TableColumn fx:id="colLoan" prefWidth="277.0" text="Loan" />
+                      <TableColumn fx:id="colInstallmentAmount" prefWidth="256.0" text="Installment Amount" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </JFXScrollPane>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="26.0" layoutY="243.0" prefHeight="40.0" prefWidth="1159.0" styleClass="vbox">
+         <children>
+            <VBox alignment="CENTER" prefHeight="36.0" prefWidth="140.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="51.0" prefWidth="217.0" text="Installment" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Eras Bold ITC" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="51.0" prefWidth="291.0">
+               <children>
+                  <AnchorPane prefHeight="80.0">
+                     <children>
+                        <Label fx:id="lblInstallmentAmount" alignment="CENTER" contentDisplay="CENTER" layoutX="56.0" layoutY="4.0" prefHeight="50.0" prefWidth="0.0" styleClass="labelNormal" textAlignment="CENTER" textFill="#00cf83" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="36.0" prefWidth="183.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="51.0" prefWidth="194.0" text="Installment Date" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Eras Bold ITC" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="51.0" prefWidth="214.0">
+               <children>
+                  <AnchorPane prefHeight="80.0">
+                     <children>
+                        <Label fx:id="lblInstallmentDate" alignment="CENTER" contentDisplay="CENTER" layoutX="56.0" layoutY="4.0" prefHeight="36.0" prefWidth="219.0" styleClass="labelNormal" textAlignment="CENTER" textFill="#00cf83" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" prefHeight="36.0" prefWidth="156.0" text="Loan Amount" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Eras Bold ITC" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLoanBalance" alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="251.0" styleClass="labelNormal" textAlignment="CENTER" textFill="#00cf83">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="25.0" layoutY="288.0" prefHeight="196.0" prefWidth="1159.0" styleClass="vbox" stylesheets="@../assets/cssStyle.css">
+         <children>
+            <JFXScrollPane prefHeight="413.0" prefWidth="1142.0" stylesheets="@../assets/cssStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <TableView fx:id="tblViewLoanInstallment" prefHeight="268.0" prefWidth="819.0" styleClass="vbox">
+                     <columns>
+                        <TableColumn fx:id="colID" prefWidth="186.0" text="ID" />
+                        <TableColumn fx:id="colAmount" prefWidth="185.0" text="Installment Amount" />
+                        <TableColumn fx:id="colDate" prefWidth="180.0" text="Date" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </JFXScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

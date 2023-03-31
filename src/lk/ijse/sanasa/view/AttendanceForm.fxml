@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" side="BOTTOM" stylesheets="@../assets/cssStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <tabs>
+      <Tab text="Attendance">
+        <content>
+          <AnchorPane prefHeight="900.0" prefWidth="1191.0">
+               <children>
+                  <AnchorPane fx:id="pane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="861.0" prefWidth="1200.0" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css">
+                     <children>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="38.0" prefHeight="59.0" prefWidth="305.0" styleClass="labelHead" text="ATTENDANCE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="38.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNotifyApprove" layoutX="666.0" layoutY="691.0" prefHeight="28.0" prefWidth="518.0" />
+                        <JFXScrollPane layoutX="40.0" layoutY="126.0" prefHeight="685.0" prefWidth="443.0">
+                           <children>
+                              <TableView fx:id="lblAccountIDs" prefHeight="200.0" prefWidth="200.0">
+                                 <columns>
+                                    <TableColumn fx:id="colAccountID" prefWidth="105.0" text="AccountID" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </JFXScrollPane>
+                        <JFXScrollPane layoutX="677.0" layoutY="126.0" prefHeight="685.0" prefWidth="443.0">
+                           <children>
+                              <TableView fx:id="tblAttendance" prefHeight="200.0" prefWidth="200.0">
+                                 <columns>
+                                    <TableColumn fx:id="colAttendance" prefWidth="75.0" text="Attendance" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </JFXScrollPane>
+                        <JFXButton layoutX="517.0" layoutY="300.0" onAction="#btnAddOnAction" prefHeight="88.0" prefWidth="130.0" text="Add" />
+                        <JFXButton layoutX="517.0" layoutY="458.0" onAction="#btnRemoveOnAction" prefHeight="88.0" prefWidth="130.0" text="Remove" />
+                        <JFXButton layoutX="761.0" layoutY="819.0" onAction="#btnSubmitOnAction" prefHeight="44.0" prefWidth="326.0" text="Submit" />
+                        <Label alignment="CENTER" layoutX="628.0" layoutY="46.0" prefHeight="43.0" prefWidth="266.0" style="-fx-border-color: white;" styleClass="labelNormal" text="Meeting ID" textAlignment="CENTER" textFill="WHITE" />
+                        <Label fx:id="lblMeetingID" alignment="CENTER" layoutX="899.0" layoutY="46.0" prefHeight="43.0" prefWidth="266.0" style="-fx-border-color: white;" styleClass="labelNormal" textAlignment="CENTER" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="View Attendance">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1187.0" styleClass="AnchorPane" stylesheets="@../assets/cssStyle.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="59.0" prefWidth="305.0" styleClass="labelHead" text="ATTENDANCE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="38.0" />
+                     </font>
+                  </Label>
+                  <JFXScrollPane layoutX="34.0" layoutY="94.0" prefHeight="753.0" prefWidth="1129.0">
+                     <children>
+                        <TableView fx:id="tblViewAttendance" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </JFXScrollPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>
