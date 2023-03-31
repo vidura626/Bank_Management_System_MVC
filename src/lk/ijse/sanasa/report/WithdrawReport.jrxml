@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WithdrawReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="de0cffaa-51ea-4719-8ee8-729b742e8df9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[c2FuYXNhLndpdGhkcmF3YWwgLDE1LDE2NSw1Y2VkZTFkMi02Mjc4LTQzZWUtOTM0YS1kNDY3N2Rm
+MDM5ODQ7c2FuYXNhLmRlcG9zaXRhY2NvdW50ICwyNTIsMjY5LGZmNGIxNDllLTcxYzAtNDk2Yi05
+MGZjLWUwMDI3MjgxOGJmZDtzYW5hc2EuZGVwb3NpdGRldGFpbHMgLDQ4OSwzMDAsYWE3NGIzNmMt
+OGU1NS00NWFlLWFmZDMtYzY4NDM0Nzc4YzBiO3NhbmFzYS50cmFuc2FjdGlvbiAsMjUyLDE1LGE0
+ZmRjNGJkLWMwMGItNDZiNC04N2U5LTA0NmM1YmQ1YjBmYzs=]]>
+	</property>
+	<queryString>
+		<![CDATA[SELECT sanasa.withdrawal.`TransactionID`,
+	sanasa.withdrawal.`Amount`,
+	sanasa.depositdetails.`Description`,
+	sanasa.depositaccount.`Balance`,
+	sanasa.transaction.`AccountID`,
+	sanasa.withdrawal.`WithdrawalID`
+FROM sanasa.withdrawal
+	INNER JOIN sanasa.transaction ON 
+	 sanasa.withdrawal.`TransactionID` = sanasa.transaction.`TransactionID` 
+	INNER JOIN sanasa.depositaccount ON 
+	 sanasa.withdrawal.`DepositTypeAccountID` = sanasa.depositaccount.`DepositTypeAccountID` 
+	INNER JOIN sanasa.depositdetails ON 
+	 sanasa.depositaccount.`DepositTypeID` = sanasa.depositdetails.`DepositTypeID` 
+ORDER BY sanasa.withdrawal.`WithdrawalID` DESC]]>
+	</queryString>
+	<field name="TransactionID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TransactionID"/>
+		<property name="com.jaspersoft.studio.field.label" value="TransactionID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="withdrawal"/>
+	</field>
+	<field name="Amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="withdrawal"/>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="depositdetails"/>
+	</field>
+	<field name="Balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Balance"/>
+		<property name="com.jaspersoft.studio.field.label" value="Balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="depositaccount"/>
+	</field>
+	<field name="AccountID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="AccountID"/>
+		<property name="com.jaspersoft.studio.field.label" value="AccountID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaction"/>
+	</field>
+	<field name="WithdrawalID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="WithdrawalID"/>
+		<property name="com.jaspersoft.studio.field.label" value="WithdrawalID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="withdrawal"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="475" height="80" uuid="8491dbbb-80ff-4524-a04c-28572d73c031"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SANASA BANK
+(Habarakada -West, Thawalama, Galle)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="330" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="300" width="100" height="30" uuid="d18db641-c546-4f5d-b763-d36518f04c2e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank You !]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="210" y="259" width="100" height="30" uuid="21537022-0cb3-4d56-8a65-c1cd418b5496"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="210" y="229" width="100" height="30" uuid="38c3a5ec-931a-463a-b9df-2954b584f3e8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="40" width="100" height="30" uuid="04ad63b0-3723-49f3-8812-201c53d885a2"/>
+				<textFieldExpression><![CDATA[$F{TransactionID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="40" width="100" height="30" uuid="fe3fdb98-d272-49ed-92f8-c8271944b064"/>
+				<text><![CDATA[TransactionID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="71" width="100" height="30" uuid="2cc09670-e6ee-4975-8b67-2307b0c4b478"/>
+				<textFieldExpression><![CDATA[$F{AccountID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="71" width="100" height="30" uuid="eec508ef-b918-4e6f-9528-c980b1f9399d"/>
+				<text><![CDATA[AccountID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="101" width="100" height="30" uuid="39f50897-3281-42d1-a515-b2e6c424f605"/>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="101" width="100" height="30" uuid="f032dcbe-92ae-469b-bb32-45f1700b28bc"/>
+				<text><![CDATA[Deposit Type]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="160" width="100" height="30" uuid="0a55c41b-ffcd-4b30-b07c-3bfd59f15722"/>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="160" width="100" height="30" uuid="f4b7fb08-e2e2-482c-abda-216784fac51c"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="190" width="100" height="30" uuid="a7aba17b-0c84-4c15-beea-3991930758c7"/>
+				<textFieldExpression><![CDATA[$F{Balance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="190" width="100" height="30" uuid="d6d7f32f-43f9-4529-b709-ca4f41c5ef81"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="131" width="100" height="30" uuid="3dd473d4-633c-4647-ad4d-54fd092678d4"/>
+				<textFieldExpression><![CDATA[$F{WithdrawalID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="131" width="100" height="30" uuid="6ab40a36-4dae-4d47-9807-17f5aa2c76a6"/>
+				<text><![CDATA[WithdrawalID]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

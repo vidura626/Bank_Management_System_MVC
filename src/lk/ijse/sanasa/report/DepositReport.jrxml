@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DepositReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4f22e69-af51-4240-84bb-52fd590205de">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Demo Adapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT sanasa.transaction.`TransactionID`,
+	sanasa.deposit.`DepositID`,
+	sanasa.depositdetails.`Description`,
+	sanasa.deposit.`Amount`,
+	sanasa.depositaccount.`Balance`,
+	sanasa.transaction.`AccountID`
+FROM sanasa.deposit
+	INNER JOIN sanasa.transaction ON 
+	 sanasa.deposit.`TransactionID` = sanasa.transaction.`TransactionID` 
+	INNER JOIN sanasa.depositaccount ON 
+	 sanasa.deposit.`DepositTypeAccountID` = sanasa.depositaccount.`DepositTypeAccountID` 
+	INNER JOIN sanasa.depositdetails ON 
+	 sanasa.depositaccount.`DepositTypeID` = sanasa.depositdetails.`DepositTypeID` 
+ORDER BY sanasa.deposit.`DepositID` DESC]]>
+	</queryString>
+	<field name="TransactionID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TransactionID"/>
+		<property name="com.jaspersoft.studio.field.label" value="TransactionID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaction"/>
+	</field>
+	<field name="DepositID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DepositID"/>
+		<property name="com.jaspersoft.studio.field.label" value="DepositID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit"/>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="depositdetails"/>
+	</field>
+	<field name="Amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit"/>
+	</field>
+	<field name="Balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Balance"/>
+		<property name="com.jaspersoft.studio.field.label" value="Balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="depositaccount"/>
+	</field>
+	<field name="AccountID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="AccountID"/>
+		<property name="com.jaspersoft.studio.field.label" value="AccountID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaction"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="475" height="80" uuid="5622362a-b872-4bbf-8f54-8eb0a3945733"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SANASA BANK
+(Habarakada -West, Thawalama, Galle)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="368" splitType="Stretch">
+			<textField>
+				<reportElement x="280" y="0" width="160" height="30" uuid="d463c9d0-cdad-452f-82c2-a6f576295065">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b56bc46c-0d4b-4aaf-adb5-25ce19ab2a49"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{TransactionID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="90" width="160" height="30" uuid="c277505d-54a1-4608-a8e0-705059ebfc2e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa6f141d-1569-4e42-b9df-f7293c89b3de"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{DepositID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="60" width="160" height="30" uuid="4380f20e-91ff-4504-bef7-9f857252ac97">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4607287f-ce26-4887-b133-bd0b8a4a45f9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="120" width="160" height="30" uuid="36af2cb3-65e4-4fb9-adfd-adc4d149ebcd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0fbc855b-34b8-421a-b709-a8add41c02a5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="150" width="160" height="30" uuid="20724acb-b4a8-45c7-a41e-416c55403bb5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3df9514-13f1-428b-9185-1ee257c4f5ac"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Balance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="80" height="30" uuid="776c7528-5181-4ea2-ace9-e69af0c66bc0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b56bc46c-0d4b-4aaf-adb5-25ce19ab2a49"/>
+				</reportElement>
+				<text><![CDATA[TransactionID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="60" width="80" height="30" uuid="1c436403-3439-434a-8638-e302a670bf14">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa6f141d-1569-4e42-b9df-f7293c89b3de"/>
+				</reportElement>
+				<text><![CDATA[Deposit Type]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="30" width="160" height="30" uuid="3ca695e9-1e08-4c3b-8ce9-caff4e67a278">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6f4043a1-afc6-4c1b-94a1-2128d9a15618"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AccountID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="30" width="80" height="30" uuid="3d64ab05-2ab1-4030-9c5d-e99f0eea608f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6f4043a1-afc6-4c1b-94a1-2128d9a15618"/>
+				</reportElement>
+				<text><![CDATA[AccountID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="120" width="80" height="30" uuid="83787853-081b-440b-ac8b-abedc462fada">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0fbc855b-34b8-421a-b709-a8add41c02a5"/>
+				</reportElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="150" width="80" height="30" uuid="87e3b5bd-9bde-43b0-b517-a2697c29c954">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3df9514-13f1-428b-9185-1ee257c4f5ac"/>
+				</reportElement>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="90" width="80" height="30" uuid="e7a20090-214b-4545-ae85-dd185b85d493">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa6f141d-1569-4e42-b9df-f7293c89b3de"/>
+				</reportElement>
+				<text><![CDATA[Deposit ID]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="210" y="200" width="100" height="30" uuid="49457d48-0856-4c19-a31f-ac0792ce22d4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="210" y="230" width="100" height="30" uuid="01b7b9cc-0167-47f9-8245-ea1515311ec1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="210" y="300" width="100" height="30" uuid="dc875a03-f45f-40a4-b8d4-cb638bfa5f47"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank You !]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

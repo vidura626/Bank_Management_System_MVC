@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="loanReportjrxml" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5e1599a4-104f-4b6a-b220-ea40d79b9ed9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[c2FuYXNhLmxvYW5pbnN0YWxsbWVudCBBUyAsNTQsMzMsZDRiMGY3NjQtNjNhYi00YmVlLWI2NzAt
+ZjJhNjgyYTE1N2VhO3NhbmFzYS50cmFuc2FjdGlvbiBBUyAsMTgyLDMzMyw5Y2QyMDdkZi1hMjEw
+LTQ3MTctYTk5Zi1mMTViN2QyZTg0OTg7c2FuYXNhLmxvYW5zIEFTICw0MzYsNjYsMDIyYjU3OTUt
+ZDRiZi00MDUzLWI3OWEtNWJhN2IxZjM1ZGIwO3NhbmFzYS5sb2FuZGV0YWlscyBBUyAsNzI3LDE4
+NSxhZTU4NGIwOC0zMDYzLTRhNzktYjdlMC1hN2E2M2EwMDUzMWI7]]>
+	</property>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="789"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="201"/>
+	<queryString>
+		<![CDATA[SELECT sanasa.transaction.`TransactionID`,
+	sanasa.transaction.`AccountID`,
+	sanasa.transaction.`Amount`,
+	sanasa.loans.`LoanID`,
+	sanasa.loans.`RemainingLoanAmount`,
+	sanasa.loandetails.`Description`,
+	sanasa.transaction.`TransactionID`,
+	sanasa.transaction.`AccountID`,
+	sanasa.transaction.`Amount`,
+	sanasa.loaninstallment.`LoanInstallmentID`,
+	sanasa.loandetails.`Description`,
+	sanasa.loans.`RemainingLoanAmount`,
+	sanasa.loans.`SettledOrNot`
+FROM sanasa.loaninstallment
+	INNER JOIN sanasa.loans ON 
+	 sanasa.loaninstallment.`LoanID` = sanasa.loans.`LoanID` 
+	INNER JOIN sanasa.transaction ON 
+	 sanasa.loaninstallment.`TransactionID` = sanasa.transaction.`TransactionID` 
+	INNER JOIN sanasa.loandetails ON 
+	 sanasa.loans.`LoanTypeID` = sanasa.loandetails.`LoanTypeID`]]>
+	</queryString>
+	<field name="TransactionID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TransactionID"/>
+		<property name="com.jaspersoft.studio.field.label" value="TransactionID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaction"/>
+	</field>
+	<field name="AccountID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="AccountID"/>
+		<property name="com.jaspersoft.studio.field.label" value="AccountID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaction"/>
+	</field>
+	<field name="Amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transaction"/>
+	</field>
+	<field name="LoanID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LoanID"/>
+		<property name="com.jaspersoft.studio.field.label" value="LoanID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loans"/>
+	</field>
+	<field name="RemainingLoanAmount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="RemainingLoanAmount"/>
+		<property name="com.jaspersoft.studio.field.label" value="RemainingLoanAmount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loans"/>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loandetails"/>
+	</field>
+	<field name="LoanInstallmentID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LoanInstallmentID"/>
+		<property name="com.jaspersoft.studio.field.label" value="LoanInstallmentID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loaninstallment"/>
+	</field>
+	<field name="SettledOrNot" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SettledOrNot"/>
+		<property name="com.jaspersoft.studio.field.label" value="SettledOrNot"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loans"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="475" height="80" uuid="84a1f3e1-8650-40ff-8a78-eee6cd7161d2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SANASA BANK
+(Habarakada -West, Thawalama, Galle)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="458" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="210" y="320" width="100" height="30" uuid="3e3e8d3d-1e6d-48d7-bc3f-53bd29b357be"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="210" y="350" width="100" height="30" uuid="4f30f541-16df-4aca-9f34-8b47fba1ab30"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="210" y="420" width="100" height="30" uuid="5346fee7-8453-4adb-b5c9-3d222d7672ff"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank You !]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="30" width="100" height="30" uuid="a6800152-cb7d-4a90-83d6-6ffcae7e3c82"/>
+				<textFieldExpression><![CDATA[$F{TransactionID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="30" width="100" height="30" uuid="f8c618fa-6f42-4572-807c-1e2ca6ff3633"/>
+				<text><![CDATA[TransactionID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="60" width="100" height="30" uuid="5a7f4533-d19f-46d7-80ea-0b09dab64c77"/>
+				<textFieldExpression><![CDATA[$F{AccountID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="60" width="100" height="30" uuid="b536d8eb-2f66-4ff5-9721-ce3a60b18afd"/>
+				<text><![CDATA[AccountID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="90" width="100" height="30" uuid="291f2249-d7ac-4fa0-961c-941a8fc4fe07"/>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="90" width="100" height="30" uuid="5ab66f5c-8cfe-422d-a50b-678a0ae132c8"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="120" width="100" height="30" uuid="6a620fb5-fed9-4a63-adf9-f40f6d3a25c0"/>
+				<textFieldExpression><![CDATA[$F{LoanID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="120" width="100" height="30" uuid="83a3ab30-0714-4f90-9652-ad370673eaed"/>
+				<text><![CDATA[LoanID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="180" width="100" height="30" uuid="92244520-edf5-4d18-8b8f-fe4295cae3a6"/>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="180" width="100" height="30" uuid="4721837b-3605-46dd-aad6-ffd14553f982"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="210" width="100" height="30" uuid="d240ace2-9038-4e3e-92b4-d8bacfef7e0e"/>
+				<textFieldExpression><![CDATA[$F{RemainingLoanAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="210" width="100" height="30" uuid="ea38558b-2ca4-4a1f-b859-239f88b5ea63"/>
+				<text><![CDATA[RemainingLoanAmount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="244" width="100" height="30" uuid="1ab77025-ee82-4152-a336-2fc937c9144f"/>
+				<textFieldExpression><![CDATA[$F{SettledOrNot}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="244" width="100" height="30" uuid="4f44bd1a-417e-41c6-8231-f16c70e958ac"/>
+				<text><![CDATA[SettledOrNot]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="150" width="100" height="30" uuid="23016a6b-a651-4f9c-9e4c-b494e329c2d9"/>
+				<textFieldExpression><![CDATA[$F{LoanInstallmentID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="150" width="100" height="30" uuid="96ce6065-5bab-4ae8-9ebb-3b6b5e960dd8"/>
+				<text><![CDATA[LoanInstallmentID]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
