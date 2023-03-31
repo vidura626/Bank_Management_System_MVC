@@ -1,0 +1,97 @@
+.tab{
+    -fx-background-color:linear-gradient(derive(#1e272e,5%), derive(#2c3e50,1%) , derive(#2c3e50,15%),derive(#2c3e50,5%), derive(#2c3e50,1%) , derive(#1e272e,15%)  );
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+.tab-header-background{
+    -fx-background-color:linear-gradient(derive(#1e272e,5%), derive(#2c3e50,1%) , derive(#2c3e50,15%),derive(#2c3e50,5%), derive(#2c3e50,1%) , derive(#1e272e,15%)  );
+}
+
+.button{
+    -fx-background-color: black;
+    -fx-text-fill: whitesmoke;
+    -fx-font-family: "Eras Bold ITC";
+    -fx-font-size: 18;
+    -fx-cursor: hand;
+    -fx-background-radius: 20;
+    -fx-border-color: whitesmoke;
+    -fx-border-width: 2px;
+    -fx-border-radius: 20;
+}
+.button:hover {
+    -fx-background-color: #192a56;
+}
+.text-field{
+    -fx-background-color:linear-gradient(derive(wheat,20%),derive(whitesmoke,80%), derive(whitesmoke,30%));
+    -fx-border-color: black;
+    -fx-font-size: 18;
+    -fx-font-family: "Eras Demi ITC";
+    -fx-font-smoothing-type: gray;
+    -fx-focus-traversable: true;
+    -fx-background-radius: 15;
+    -fx-border-radius: 10;
+}
+.text-field:focused{
+    -fx-background-color: whitesmoke;
+}
+
+.AnchorPane{
+    -fx-background-color:linear-gradient(derive(#1e272e,5%), derive(#2c3e50,1%) , derive(#2c3e50,15%),derive(#2c3e50,5%), derive(#2c3e50,1%) , derive(#1e272e,15%)  );
+    -fx-border-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+.vbox{
+    -fx-background-color: derive(black, 30%);
+    -fx-background-radius: 15;
+    -fx-border-color: whitesmoke;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15;
+}
+
+.labelHead{
+    -fx-background-color: derive(black, 0%);
+    -fx-background-radius: 15;
+    -fx-border-color: whitesmoke;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15;
+    -fx-font-family: "Eras Bold ITC";
+    -fx-font-size: 30px;
+    -fx-text-fill: whitesmoke
+;
+}
+
+.labelNormal{
+    -fx-font-family: "Eras Bold ITC";
+    -fx-background-color: derive(black, 30%);
+    -fx-background-radius: 15;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15;
+
+}
+.labelNotify{
+    -fx-font-family: "Eras Medium ITC";
+    -fx-font-size: 15;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+.table-view{
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-font-family: "Eras Medium ITC";
+    -fx-font-size: 16px;
+}
+
+.table-column{
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-pref-height: 50px;
+}
+
+.scroll-pane{
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
